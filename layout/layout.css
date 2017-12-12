@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(48, 4, 69);
+  }
+
+  ul li a {
+    display: block;
+    padding: 20px;
+    border-bottom: 2px solid rgb(96, 25, 190);
+  }
+
+  a:hover {
+    background-color: rgba(255, 198, 252, 0.5);
+  }
+
+  nav {
+    float: left;
+    width: 200px;
+  }
+
+  body {
+    background-image: url(images/photo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 백그라운드의 사이즈 지정 */
+    background-attachment: fixed;
+
+  }
+
+  .center {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  header {
+    background: rgba(138, 74, 221, 0.56);
+  }
+
+  header h1 {
+    text-align: center;
+    padding: 30px 0;
+    color: rgb(226, 237, 236);
+  }
+
+  h1 {
+    color: rgb(20, 18, 18);
+    font-family: 'Faster One', cursive;
+  }
+
+  section {
+    background: rgba(241, 233, 233, 0.7);
+    overflow: hidden;
+  }
+
+  article {
+    float: right;
+    width: 800px;
+  }
+
+  article .wrap {
+    padding: 20px;
+  }
+
+  footer {
+    clear: left;
+    background: rgba(200, 169, 204, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  #art {
+    position: relative;
+  }
+
+  #art h1 {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(48, 4, 69);
+  }
+
+  #art .wrap>img {
+    float: left;
+    padding-right: 50px;
+  }
+
+  #art .box {}
+
+
+  body .gallery {}
+
+  .gallery img {
+    width: 93%;
+  }
+
+  .box {}
+
+  .cc {
+    color: rgb(27, 2, 29);
+    clear: left;
+    text-align: center;
+  }
+
+  .play1 {
+    position: relative;
+    left: 40px;
+  }
+
+  .play2 {
+    position: relative;
+    left: 40px;
+  }
+
+  .play3 {
+    position: relative;
+    left: 40px;
+  }
