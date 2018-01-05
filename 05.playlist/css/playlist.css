@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* common, reset */
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+img{max-width: 100%;}
+button{background: none; border:0; cursor: pointer;}
+html, body{height: 100%;}
+body{
+  font-family: sans-serif;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+}
+.skip{font-size: 0;text-indent: -99999px;position: absolute;left: -99999px;}
+
+/* playlist =================================*/
+/* front */
+.playlist{
+  position: absolute;
+  top:50%; left:50%;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  width:360px; height:565px;
+  background: rgba(255,255,255,0.2);
+  color:#1b4357;
+  box-shadow: 0 0 20px #1b4357;
+  border-radius: 5px;
+  transition: transform 1s;/*부드럽게 넘기기*/
+  backface-visibility: hidden;/*뒤집어져 있을때 숨김표시*/
+}
+.playlist.back{
+  z-index: -1;
+transform: translate(-50%, -50%) rotateY(180deg);
+}
+.top{
+  position: relative;
+  border-bottom: 1px solid #1b4357;
+}
+.top h1{
+  text-align: center;
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+}
+.top button{
+  position: absolute;
+  top:0;
+  width:50px; height:50px;
+}
+.top .btn-back{left:0;}
+.top .btn-list{right:0;}
+
+.now-play{padding: 20px 30px;}
+.now-play img{}
+.now-play .box{
+  position: relative;
+  margin: 10px 0;
+}
+.now-play .box p{
+  text-align: center;
+  font-size: 13px;
+  margin: 0 30px;/*아이콘 영역 침범막기*/
+}
+.now-play .box p b{display: block;}
+.now-play .box button{
+  position: absolute;
+  top:0;
+  width:35px; height:35px;
+  color:#1b4357;
+}
+.now-play .box .btn-add{left:0;}
+.now-play .box .btn-like{right:0;}
+.now-play .box .btn-like.on{color:#fff;}
+
+.control{
+  margin: 20px 0;
+  padding: 0 30px;
+}
+.control .progressbar{
+  position: relative;
+  margin:20px 0;
+}
+.control .progressbar .bar-bg{
+  position: relative;
+  background: #1b4357;
+  height: 6px; width: 240px;
+  margin:auto;
+  border-radius: 3px;
+}
+.control .progressbar .bar-bg .bar{
+  position: absolute;
+  left:0;
+  width:20%; height: 6px;
+  border-radius: 3px;
+  background: #fff;
+}
+.control .progressbar > span{
+  position: absolute;
+  top:-6px;
+  font-size: 12px;
+}
+.control .progressbar .now{left:0;}
+.control .progressbar .time{right:0;}
+
+.control .btn-area{text-align: center;}
+.control .btn-area button{}
+.control .btn-area button i{font-size: 30px; color:#fff;}
+.control .btn-area .btn-repeat{margin-right:30px;}
+.control .btn-area .btn-prev{margin-right:20px;}
+.control .btn-area .btn-play{
+  width:50px; height:50px;
+  border-radius: 50%;
+  background: #fff;
+}
+.control .btn-area .btn-play i{color:#1b4357;}
+.control .btn-area .btn-next{margin-left:20px;}
+.control .btn-area .btn-shuffle{margin-left:30px; opacity: 0.5;}
+
+/* back */
+.list{
+  height: 490px;
+  overflow-y: hidden;
+}
+.list li{
+  position: relative;
+  height: 70px;
+  padding: 10px 20px;
+  border-bottom:1px solid #1b4357;
+  box-sizing: border-box;
+}
+.list li img{position: absolute;}
+.list li dl{margin:0 60px; font-size: 14px;}
+.list li dl dt{
+  font-weight: bold; padding-bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.list li dl dd{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.list li button{
+  position: absolute;
+  right: 0;
+  top:50%;
+  transform: translateY(-50%);
+  color:#1b4357;
+  width:50px; height:50px;
+}
+.list .active{
+  background: #1b4357;
+  color:#fff;
+}
+.list .active button{
+  color:#fff;
+}

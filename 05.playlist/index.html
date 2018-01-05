@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>playlist</title>
+    <!-- 디바이스별 크기 맞춤 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/playlist.css">
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+      // 재생목록 버튼을 눌렀을 때 화면 회전처리
+      // 앞면안보이게 뒷면보이게
+      $('.btn-list').click(function(){
+        $('#front').addClass('back');
+        $('#back').removeClass('back');
+        //1초뒤에 .list의 overflow속성 값 변경하기
+        setTimeout(function(){
+            $('.list').css('overflow-y','auto');
+        },1000)
+      })
+
+      //뒷면에서 뒤로가기 누르면 다시 회전처리
+
+        $('#back .btn-back').click(function(){
+          $('#back').addClass('back');
+          $('#front').removeClass('back');
+          //overflow속성 다시 원상복귀
+          $('.list').css('overflow-y','hidden');
+        })
+
+        //좋아요 누르면 색상변경
+        $('.btn-like').click(function(){
+            $(this).toggleClass('on');
+        })
+
+
+    })
+    </script>
+  </head>
+  <body>
+    <div id="front" class="playlist">
+      <div class="top">
+        <h1>Playlist - 겨울소리</h1>
+        <button class="btn-back">
+          <i class="material-icons">&#xE314;</i>
+          <span class="skip">뒤로가기</span>
+        </button>
+        <button class="btn-list">
+          <i class="material-icons">&#xE05F;</i>
+          <span class="skip">재생목록</span>
+        </button>
+      </div>
+      <!-- top end -->
+
+      <div class="now-play">
+        <img src="images/album-1.jpg" alt="앨범이미지">
+        <div class="box">
+          <p><b>주인도 없는 이 하얀 그림 위에다</b>
+          그려보고싶은 너의 이름 하나</p>
+          <button class="btn-add">
+            <i class="material-icons">&#xE148;</i>
+            <span class="skip">추가</span>
+          </button>
+          <button class="btn-like">
+            <i class="material-icons">&#xE87D;</i>
+            <span class="skip">좋아요</span>
+          </button>
+        </div>
+      </div>
+      <!-- now-play end -->
+
+      <div class="control">
+        <div class="progressbar">
+          <div class="bar-bg">
+            <span class="bar"></span>
+          </div>
+          <span class="now">0:40</span>
+          <span class="time">3:40</span>
+        </div>
+        <div class="btn-area">
+          <button class="btn-repeat"><i class="material-icons">&#xE040;</i><span class="skip">반복</span></button>
+          <button class="btn-prev"><i class="material-icons">&#xE020;</i><span class="skip">이전</span></button>
+          <button class="btn-play"><i class="material-icons">&#xE037;</i><span class="skip">재생</span></button>
+          <button class="btn-next"><i class="material-icons">&#xE01F;</i><span class="skip">다음</span></button>
+          <button class="btn-shuffle"><i class="material-icons">&#xE043;</i><span class="skip">랜덤</span></button>
+        </div>
+      </div>
+      <!-- control end -->
+    </div>
+    <!-- front end -->
+
+    <div id="back" class="playlist back">
+      <div class="top">
+        <h1>Playlist - 겨울소리</h1>
+        <button class="btn-back">
+          <i class="material-icons">&#xE314;</i>
+          <span class="skip">뒤로가기</span>
+        </button>
+      </div>
+      <!-- top end -->
+
+      <!-- ul>li*10>img[src=images/album-s-$.jpg][alt=앨범이미지]+(dl>dt+dd)+button -->
+      <ul class="list">
+        <li class="active">
+          <img src="images/album-s-1.jpg" alt="앨범이미지">
+          <dl>
+            <dt>겨울소리</dt>
+            <dd>박효신 / 겨울소리</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-2.jpg" alt="앨범이미지">
+          <dl>
+            <dt>instagram</dt>
+            <dd>DEAN / instagram</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-3.jpg" alt="앨범이미지">
+          <dl>
+            <dt>비행운</dt>
+            <dd>문문(MoonMoon) / LIFE IS BEAUTY FULL</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-4.jpg" alt="앨범이미지">
+          <dl>
+            <dt>선물</dt>
+            <dd>멜로망스(Melomance) / Moonlight</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-5.jpg" alt="앨범이미지">
+          <dl>
+            <dt>Heart Shaker</dt>
+            <dd>TWICE(트와이스) / Merry & Happy</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-6.jpg" alt="앨범이미지">
+          <dl>
+            <dt>밤이 되니까</dt>
+            <dd>펀치(Punch) / 밤이 되니까</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-7.jpg" alt="앨범이미지">
+          <dl>
+            <dt>기억의 빈자리</dt>
+            <dd>나얼 / 기억의 빈자리</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-8.jpg" alt="앨범이미지">
+          <dl>
+            <dt>좋아</dt>
+            <dd>민서, 윤종신 / 2017 월간 윤종신 11월호</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-9.jpg" alt="앨범이미지">
+          <dl>
+            <dt>좋니</dt>
+            <dd>윤종신 / LISTEN 010 좋니</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+        <li>
+          <img src="images/album-s-10.jpg" alt="앨범이미지">
+          <dl>
+            <dt>LIKEY</dt>
+            <dd>TWICE(트와이스) / twicetagram</dd>
+          </dl>
+          <button><i class="material-icons">&#xE038;</i><span class="skip">재생</span></button>
+        </li>
+      </ul>
+    </div>
+    <!-- back end -->
+
+
+
+
+
+  </body>
+</html>
