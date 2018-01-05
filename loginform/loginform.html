@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+    img{}
+    html, body{height:  100%;}
+    body{
+      background: url(images/city.jpg) no-repeat;
+      background-size: cover;
+    }
+     h1{text-align: center; padding-top: 150px; color:#fff;}
+     h1 > b{display: block;}
+    .wrap{
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+       width: 300px; height: 300px;
+
+     }
+    .box{}
+    fieldset{border: 0;}
+    .box .id{position: relative;}
+    .box .id input[type=text]{width: 300px; height: 40px; margin-bottom: 10px; padding: 0 10px; box-sizing: border-box;}
+    .box .id input[type=button]{width: 30px; height: 30px; border-radius: 50%; border: 0; background-color:#fff000; color: #000; font-weight: bold; position: absolute; right: 10px;
+    top: 6px; font-size: 20px;}
+    .box .password{}
+    .box .password input[type=text]{width: 300px; height: 40px; margin-bottom: 15px; padding: 0 10px; box-sizing: border-box;}
+    .box .select{}
+    .box .select input[type=checkbox]{margin-bottom: 20px;}
+    .box .select label{color:#dedde2;}
+    .box .login{}
+    .box .login input[type=button]{width: 300px; height: 40px; margin-bottom: 20px; border: 0; background-color:#fff000; font-size: 14px; font-weight: bold;}
+    .box .ex{}
+    .box .ex ul{box-sizing: border-box;}
+    .box .ex ul li{display: inline-block; font-size: 15px; font-weight: bold; color:#dedde2;}
+    .box .ex ul li:nth-child(2){margin:0 30px;}
+
+
+
+    </style>
+  </head>
+  <body>
+    <h1><b>지금 '만나는'</b> 카카오스토리</h1>
+    <div class="wrap">
+      <form class="box">
+        <fieldset>
+          <div class="id">
+          <input type="text" name="카카오계정(이메일)" value="카카오계정(이메일)">
+          <input type="button" name="" value="?">
+          </div>
+          <div class="password">
+          <input type="text" name="비밀번호" value="비밀번호">
+          </div>
+          <div class="select">
+            <input type="checkbox" name="" value="">
+            <label for="">로그인상태유지</label>
+          </div>
+          <div class="login">
+            <input type="button" name="로그인" value="로그인">
+          </div>
+          <div class="ex">
+            <ul>
+              <li>회원가입</li>
+              <li>아이디찾기</li>
+              <li>비밀번호찾기</li>
+            </ul>
+          </div>
+        </fieldset>
+      </form>
+
+    </div>
+  </body>
+</html>
