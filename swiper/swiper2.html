@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>swiper1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <style>
+      *{margin: 0; padding: 0;}
+      html, body{position: relative;height: 100%;}
+      body{background: #eee; font-family: sans-serif;}
+
+      .swiper-container{
+        width: 500px;
+        height: 400px;
+        border:1px solid #000;
+      }
+      .swiper-slide{
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+      }
+      .swiper2{
+        height: auto;
+      }
+
+      img{max-width: 100%;}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">slide 1</div>
+        <div class="swiper-slide">
+          <!-- 슬라이드 중첩 -->
+          <div class="swiper-container swiper3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/mywork.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/mywork2.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/mywork3.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/mywork4.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">slide 3</div>
+        <div class="swiper-slide">slide 4</div>
+        <div class="swiper-slide">slide 5</div>
+        <div class="swiper-slide">slide 6</div>
+        <div class="swiper-slide">slide 7</div>
+        <div class="swiper-slide">slide 8</div>
+        <div class="swiper-slide">slide 9</div>
+        <div class="swiper-slide">slide 10</div>
+      </div>
+      <!-- 페이지네이션 -->
+      <div class="swiper-pagination"></div>
+      <!-- 스크롤바 -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <div class="swiper-container swiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/mywork.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/mywork2.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/mywork3.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/mywork4.png" alt=""></div>
+      </div>
+    </div>
+
+    <!-- swiper js -->
+    <script src="dist/js/swiper.min.js"></script>
+    <script>
+      var swiper1=new Swiper('.swiper1',{
+        scrollbar:{
+          el:'.swiper-scrollbar',
+          hide:true,//슬라이드가 움직일때만 스크롤바가 활성화됨.
+        },
+        direction:'vertical',//슬라이드방향을 수직으로 전환(스크롤바,페이지네이션도 수직으로 전환됨)
+        pagination:{
+          el:'.swiper-pagination',
+          clickable:true,
+        },
+        loop:true,//무한롤링처리
+        keyboard:{//키보드방향키로 슬라이드 제어
+          enabled:true,
+        },
+        mousewheel:true,//마우스휠로 슬라이드 제어
+        autoplay:{
+          delay:2500,//슬라이드 전환 시간(밀리세컨즈)
+          disableOnInteraction:true,//자동재생되는 상태에서 사용자가 컨트롤하게되면 자동재생을 멈춤
+        }
+      });
+
+      var swiper2=new Swiper('.swiper2',{
+        spaceBetween:10,
+        slidesPerColumn:2,//단의 수를 결정
+        slidesPerView:2,//슬라이드당 몇개의 뷰를 보여줄 것인지 정함.
+        centeredSlides:true,//중앙에서부터 시작
+        freeMode:true//사용자가 슬라이드 강약을 조절
+      });
+
+      //중첩된 슬라이드
+      var swiper3=new Swiper('.swiper3');
+    </script>
+  </body>
+</html>
