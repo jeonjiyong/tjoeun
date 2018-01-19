@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>grid+미디어쿼리(반응형)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      *{box-sizing: border-box;}
+      .row::after{
+        content:'';
+        clear:both;
+        display: table;
+      }
+      [class*="col-"]{
+        float: left;
+        padding: 15px;
+        border: 1px solid red;
+      }
+      /* 스마트폰 0~767px xs*/
+      @media (max-width:767px) {
+        .col-xs-1{width: 8.33%;}
+        .col-xs-2{width:16.66%;}
+        .col-xs-3{width:25%;}
+        .col-xs-4{width:33.33%;}
+        .col-xs-5{width:41.66%;}
+        .col-xs-6{width:50%;}
+        .col-xs-7{width:58.33%;}
+        .col-xs-8{width:66.66%;}
+        .col-xs-9{width:75%;}
+        .col-xs-10{width: 83.33%;}
+        .col-xs-11{width: 91.66%;}
+        .col-xs-12{width:100%;}
+      }
+
+      /* 태블릿 768px이상 sm */
+      @media (min-width:768px) {
+        .col-sm-1{width: 8.33%;}
+        .col-sm-2{width:16.66%;}
+        .col-sm-3{width:25%;}
+        .col-sm-4{width:33.33%;}
+        .col-sm-5{width:41.66%;}
+        .col-sm-6{width:50%;}
+        .col-sm-7{width:58.33%;}
+        .col-sm-8{width:66.66%;}
+        .col-sm-9{width:75%;}
+        .col-sm-10{width: 83.33%;}
+        .col-sm-11{width: 91.66%;}
+        .col-sm-12{width:100%;}
+      }
+
+      /* 작은데스크탑 992px이상 md */
+      @media (min-width:992px) {
+        .col-md-1{width: 8.33%;}
+        .col-md-2{width:16.66%;}
+        .col-md-3{width:25%;}
+        .col-md-4{width:33.33%;}
+        .col-md-5{width:41.66%;}
+        .col-md-6{width:50%;}
+        .col-md-7{width:58.33%;}
+        .col-md-8{width:66.66%;}
+        .col-md-9{width:75%;}
+        .col-md-10{width: 83.33%;}
+        .col-md-11{width: 91.66%;}
+        .col-md-12{width:100%;}
+      }
+
+      /* 큰데스크탑 1200px이상 lg */
+      @media (min-width:1200px) {
+        .col-lg-1{width: 8.33%;}
+        .col-lg-2{width:16.66%;}
+        .col-lg-3{width:25%;}
+        .col-lg-4{width:33.33%;}
+        .col-lg-5{width:41.66%;}
+        .col-lg-6{width:50%;}
+        .col-lg-7{width:58.33%;}
+        .col-lg-8{width:66.66%;}
+        .col-lg-9{width:75%;}
+        .col-lg-10{width: 83.33%;}
+        .col-lg-11{width: 91.66%;}
+        .col-lg-12{width:100%;}
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 모바일(xs):컬럼을 한줄에 1개씩 보여준다. -->
+    <!-- 태블릿(sm):컬럼을 한줄에 2개씩 보여준다. -->
+    <!-- 작은데스크탑(md):컬럼을 한줄에 4개씩 보여준다. -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">1</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">2</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">3</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">4</div>
+    </div>
+    <div class="row">
+      <div class="">1</div>
+      <div class="">2</div>
+      <div class="">3</div>
+      <div class="">4</div>
+      <div class="">5</div>
+      <div class="">6</div>
+    </div>
+  </body>
+</html>

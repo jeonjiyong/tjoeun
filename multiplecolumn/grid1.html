@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>grid1</title>
+    <style>
+      *{box-sizing: border-box;}
+      .row::after{
+        content:'';
+        clear:both;
+        display: table;
+      }
+      [class*="col-"]{
+        float: left;
+        padding: 15px;
+        border: 1px solid red;
+      }
+      /* 한줄에 넣을 수 있는 컬럼의 수는 최대 12개 */
+      /* 1 2 3 4 5 6 7 8 9 10 11 12 */
+      .col-1{width: 8.33%;}/*한줄에 최대 12개의 컬럼*/
+      .col-2{width:16.66%;}/*한줄에 최대 6개의 컬럼*/
+      .col-3{width:25%;}/*한줄에 최대 4개의 컬럼*/
+      .col-4{width:33.33%;}/*한줄에 최대 3개의 컬럼*/
+      .col-5{width:41.66%;}/*한줄에 최대 2개의 컬럼+컬럼 조합*/
+      .col-6{width:50%;}
+      .col-7{width:58.33%;}
+      .col-8{width:66.66%;}
+      .col-9{width:75%;}
+      .col-10{width: 83.33%;}
+      .col-11{width: 91.66%;}
+      .col-12{width:100%;}
+    </style>
+  </head>
+  <body>
+    <h2>컬럼 12</h2>
+    <div class="row">
+      <!-- div[class=col-1]*12>{$} -->
+      <div class="col-1">1</div>
+      <div class="col-1">2</div>
+      <div class="col-1">3</div>
+      <div class="col-1">4</div>
+      <div class="col-1">5</div>
+      <div class="col-1">6</div>
+      <div class="col-1">7</div>
+      <div class="col-1">8</div>
+      <div class="col-1">9</div>
+      <div class="col-1">10</div>
+      <div class="col-1">11</div>
+      <div class="col-1">12</div>
+    </div>
+    <h2>컬럼 6</h2>
+    <div class="row">
+      <div class="col-2">1</div>
+      <div class="col-2">2</div>
+      <div class="col-2">3</div>
+      <div class="col-2">4</div>
+      <div class="col-2">5</div>
+      <div class="col-2">6</div>
+    </div>
+    <h2>컬럼 2</h2>
+    <div class="row">
+      <div class="col-6">1</div>
+      <div class="col-6">2</div>
+    </div>
+    <div class="row">
+      <div class="col-2">1</div>
+      <div class="col-10">2</div>
+    </div>
+    <div class="row">
+      <div class="col-3">1</div>
+      <div class="col-9">2</div>
+    </div>
+    <div class="row">
+      <div class="col-4">1</div>
+      <div class="col-8">2</div>
+    </div>
+    <div class="row">
+      <div class="col-5">1</div>
+      <div class="col-7">2</div>
+    </div>
+    <div class="row">
+      <div class="col-7">1</div>
+      <div class="col-5">2</div>
+    </div>
+    <div class="row">
+      <div class="col-8">1</div>
+      <div class="col-4">2</div>
+    </div>
+    <div class="row">
+      <div class="col-9">1</div>
+      <div class="col-3">2</div>
+    </div>
+    <div class="row">
+      <div class="col-10">1</div>
+      <div class="col-2">2</div>
+    </div>
+    <h2>컬럼 3</h2>
+    <div class="row">
+      <div class="col-4">1</div>
+      <div class="col-4">2</div>
+      <div class="col-4">3</div>
+    </div>
+    <div class="row">
+      <div class="col-1">1</div>
+      <div class="col-1">2</div>
+      <div class="col-10">3</div>
+    </div>
+    <div class="row">
+      <div class="col-1">1</div>
+      <div class="col-10">2</div>
+      <div class="col-1">3</div>
+    </div>
+    <div class="row">
+      <div class="col-10">1</div>
+      <div class="col-1">2</div>
+      <div class="col-1">3</div>
+    </div>
+    <div class="row">
+      <div class="col-2">1</div>
+      <div class="col-5">2</div>
+      <div class="col-5">3</div>
+    </div>
+    <div class="row">
+      <div class="col-5">1</div>
+      <div class="col-2">2</div>
+      <div class="col-5">3</div>
+    </div>
+    <div class="row">
+      <div class="col-5">1</div>
+      <div class="col-5">2</div>
+      <div class="col-2">3</div>
+    </div>
+    <div class="row">
+      <div class="col-3">1</div>
+      <div class="col-4">2</div>
+      <div class="col-5">3</div>
+    </div>
+    <div class="row">
+      <div class="col-4">1</div>
+      <div class="col-3">2</div>
+      <div class="col-5">3</div>
+    </div>
+  </body>
+</html>

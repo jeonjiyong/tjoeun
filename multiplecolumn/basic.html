@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>basic</title>
+    <style>
+      /*
+        [multi column]
+        column-width      컬럼을 넓이로 등분(최소넓이)
+        column-count      컬럼 수로 등분
+        column-gap        컬럼간의 간격
+        column-rule-style 컬럼 사이의 선 스타일
+        column-rule-width 컬럼 사이의 선 두께
+        column-rule-color 컬럼 사이의 선 색상
+        column-rule       위의 3가지를 합쳐서 작성할때
+        column-span       컬럼안에서 span속성을 display로 바꿔줌.
+      */
+      .test1{
+        column-width: 100px;
+        column-rule: 2px solid #000;
+        column-gap: 20px;
+      }
+      .test2{
+        column-count: 3;
+        column-rule: 2px solid #000;
+        column-gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test1">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="test2">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+  </body>
+</html>

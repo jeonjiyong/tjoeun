@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>gallery</title>
+    <style>
+      *{margin: 0; padding: 0;}
+      body{font-family: sans-serif; background: #bba8cb;}
+      .wrap{
+        column-width: 200px;
+        column-gap: 15px;
+        width:90%;
+        max-width: 1000px;
+        margin:50px auto;
+      }
+      figure{
+        background: #fefefe;
+        border:2px solid #fcfcfc;
+        box-shadow: 0 1px 5px rgba(34, 25, 25, 0.4);
+        margin: 0 2px 15px;
+        padding: 15px 15px 10px 15px;
+        display: inline-block;
+        transition: all 1s;
+      }
+      figure img{
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom:5px;
+      }
+      figure figcaption{
+        font-size: 0.8em;
+        color: #333;
+      }
+      .wrap:hover figure:not(:hover){
+        opacity: 0.3;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- figure*15>(img[src=images/photo$.jpg][alt=비욘세$])(figcaption>{비욘세$}) -->
+      <figure>
+        <img src="images/photo1.jpg" alt="비욘세1">
+        <figcaption>비욘세1</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo2.jpg" alt="비욘세2">
+        <figcaption>비욘세2</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo3.jpg" alt="비욘세3">
+        <figcaption>비욘세3</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo4.jpg" alt="비욘세4">
+        <figcaption>비욘세4</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo5.jpg" alt="비욘세5">
+        <figcaption>비욘세5</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo6.jpg" alt="비욘세6">
+        <figcaption>비욘세6</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo7.jpg" alt="비욘세7">
+        <figcaption>비욘세7</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo8.jpg" alt="비욘세8">
+        <figcaption>비욘세8</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo9.jpg" alt="비욘세9">
+        <figcaption>비욘세9</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo10.jpg" alt="비욘세10">
+        <figcaption>비욘세10</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo11.jpg" alt="비욘세11">
+        <figcaption>비욘세11</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo12.jpg" alt="비욘세12">
+        <figcaption>비욘세12</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo13.jpg" alt="비욘세13">
+        <figcaption>비욘세13</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo14.jpg" alt="비욘세14">
+        <figcaption>비욘세14</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo15.jpg" alt="비욘세15">
+        <figcaption>비욘세15</figcaption>
+      </figure>
+    </div>
+  </body>
+</html>

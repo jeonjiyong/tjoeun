@@ -1,0 +1,91 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+html,body{position: relative; height: 100%}
+body{background: #ff5400; font-family: sans-serif; overflow: hidden;}
+
+/* swiper 재설정 */
+.swiper-container{
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide{
+  color: #fff;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.swiper-slide .title{font-size: 50px;}
+.swiper-slide .subtitle{font-size: 20px; padding: 10px 0; }
+.swiper-slide p{font-size: 14px;}
+[class*=swiper-button]{
+  width: auto; height: auto;
+  font-size: 3em;
+  color: #ff5400;
+  background-image: none; /*기본 버튼이미지를 없애줌*/
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-button-next{
+bottom: 20px;
+top: auto;/*원래 설정된 값을 초기화*/
+right: auto;/*원래 설정된 값을 초기화*/
+text-align: center;
+}
+.swiper-button-next strong{
+  display: block;
+  color: #fff;
+  font-size: 12px;
+}
+.bounce{animation: bounce 1s infinite alternate;}
+@keyframes bounce {
+  form{bottom: 30px;}
+  to{bottom: 10px;}
+}
+.swiper-button-prev{
+top: 20px;
+bottom: auto;
+right: auto;
+margin-top: 0;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+  display: none;
+  opacity: 0;
+}
+/* 페이지네이션 */
+.swiper-pagination-bullet{
+  background: #fff;
+  opacity: 0.8;
+  width: 16px; height: 16px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+.swiper-pagination-bullet-active{
+  height: 50px;
+  background: #ff5400;
+}
+
+
+
+/* parallax, star */
+.parallax-bg{
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 150%;
+  background: #25064c;
+  overflow: hidden;
+}
+/* 별*/
+.parallax-bg i{
+  position: absolute; color: #fff;
+  transition: all 2s;
+  animation: opacityStar 2s infinite alternate;
+}
+.parallax-bg i.fa-star-o{
+  animation-delay: 1s;
+  filter: blur(1px);
+}
+
+@keyframes opacityStar {
+  0%, 100%{opacity: 1;}
+  50%{opacity: 0.2;}
+}
