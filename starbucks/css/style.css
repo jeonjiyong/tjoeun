@@ -190,8 +190,11 @@ section{padding-top: 70px;}
 /* reserve */
 .reserve{
   position:relative; background: url(../images/main3.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 800px;
+  background-attachment:scroll;
 }
 .reserve h2{text-align: center; color: #fff; padding-top: 20px; font-size: 2em;}
 .reserve h2 sup{font-size: 0.5em;}
