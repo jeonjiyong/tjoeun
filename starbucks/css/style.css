@@ -10,6 +10,8 @@ img{max-width: 100%;}
 .skip{font-size: 0;text-indent: -99999px;position: absolute;left: -99999px;}
 .text-overflow{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
 body{font-family: 'Open sans', sans-serif;}
+/* ios number color(사파리에서 적용됨) */
+a[herf^=tel]{color: inherit; text-decoration: none;}
 
 /* header=========================================================== */
 header{position: fixed; width: 100%; z-index: 1;}
@@ -199,6 +201,21 @@ section{padding-top: 70px;}
   -o-background-size: cover;
   background-size: cover;
   background-attachment:scroll;
+}
+.reserve::before {
+  content: "";
+  display: block;
+  position: fixed;/*백그라운드 고정이 아닌 위치를 고정시킴*/
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(../images/main3.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .reserve h2{text-align: center; color: #fff; padding-top: 20px; font-size: 2em;}
 .reserve h2 sup{font-size: 0.5em;}
