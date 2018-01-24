@@ -231,7 +231,7 @@ section{padding-top: 70px;}
 }
 .reserve .reserve-store .rotate:hover .back{
   transform: translate(-50%, -50%) rotateY(0deg);
-}
+}*/
 .reserve .reserve-store .rotate .back a{
   position: absolute; bottom: 50px; left: 50%;
   transform: translateX(-50%);
@@ -241,7 +241,7 @@ section{padding-top: 70px;}
   border-radius: 3px;
   transition: all 0.2s
 
-} */
+}
 .reserve .reserve-store .rotate .back a:hover{
   background: #a26e49; color: #fff;
 }
