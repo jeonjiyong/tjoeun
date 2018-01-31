@@ -399,8 +399,10 @@
     .section{margin-top: -6px;}
     .box {
       height: 100vh;
-      background: url(images/mou.jpg) fixed;
+      background: url(images/mou1.jpg) no-repeat;
+      background-size: cover;
     }
+
 
     .product {
       /* width: 100%;
@@ -467,6 +469,83 @@
      top: 50%;
      left: 50%;
      z-index: 100; }
+
+     @media (max-width:767px) {
+        .intro .layer button{
+          color: #fff;
+          position: absolute;
+          bottom: 10%;
+          left: 43%;
+          animation: bounce 2s linear infinite;
+        }
+        .intro .layer h1 {
+        max-width: 411px;
+        }
+        .intro .layer p{
+          max-width: 400px;
+        }
+        .pro{
+        position: absolute;
+        top: 54%;
+        left: 3%;
+        font-size: 36px;
+        color: #fff;
+        text-shadow: 0 0 12px #fff;
+        }
+        .pro2{
+          position: absolute;
+          top: 71%;
+          left: 3%;
+          font-size: 14px;
+          width: 470px;
+          color: #fff;
+          text-shadow: 0 0 2px;
+        }
+        .main1 button{
+          border: 0;
+          background: #000;
+          color: #fff;
+          padding: 20px 10px;
+          line-height: 10px;
+          border-radius: 5px;
+          position: absolute;
+          top: 87%;
+          left: 4%;
+          box-sizing: border-box;
+          font-size: 25px;
+          transition: all 0.5s;
+        }
+        .main2 .sub1 h1{
+          font-size: 3em;
+          text-align: center;
+          color: #fff;
+          padding: 65px 0 20px 30px;
+        }
+        .main2 .sub1 p{
+          color: #fff;
+          font-size: 16px;
+          width: 90%;
+          padding: 38px;
+        }
+        .main2 .sub2 h1{
+          color: #fff;
+          font-size: 3em;
+          text-align: center;
+          padding: inherit;
+        }
+        .main2 .sub2 p{
+          font-size: 16px;
+          color: #fff;
+          width: 90%;
+          padding: 38px;
+        }
+        .box .product .imagebox ul li{
+          float: left;
+          width: 100%;
+          text-align: center;
+          background: #fff;
+        }
+    }
 
   </style>
 </head>
