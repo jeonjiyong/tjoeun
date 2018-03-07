@@ -153,7 +153,7 @@ height: 135px;
 /* art2 end============================================================================================= */
 .art3{height: 170px;overflow: hidden; margin-top: 10px;}
 .art3-left{float: left; width: 50%; box-sizing: border-box;}
-.art3-left iframe{float: left;}
+.art3-left iframe, .art3-left embed{float: left;}
 .art3-left dl{width: 155px; height: 168px; float: left; padding-left: 14px;}
 .art3-left dt{font-size: 14px; font-weight: bold; padding-bottom: 10px;}
 .art3-left dd{
@@ -170,7 +170,6 @@ height: 135px;
   font-size: 14px
 }
 .art3-right{width: 50%; float: left; box-sizing: border-box;}
-.art3-left iframe{float: left;}
 .art3-right dl{width: 158px; height: 168px; float: right;;}
 .art3-right dt{font-size: 16px; font-weight: bold;
     padding-bottom: 10px;}
@@ -429,7 +428,7 @@ small{color: #fff; padding-left: 15px;}
     .swiper-button-prev, .swiper-container-rtl .swiper-button-next{background: none;}
   /* art2 end============================================================================================= */
   .art3-left{float: none; width: 100%; }
-  .art3-left iframe{float: left; width: 50%;}
+  .art3-left iframe, .art3-left embed{float: left; width: 50%;}
   .art3-left dl{width: 50%; float: left; padding: 5px; box-sizing: border-box;}
   .art3-left dt{font-size: 14px; font-weight: bold; padding-bottom: 10px;}
   .art3-left dd{font-size: 13px}
