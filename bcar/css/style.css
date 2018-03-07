@@ -92,7 +92,7 @@ height: 135px;
 .main-art .ar-left dl{
   display: block;
   width: 480px;
-  background-color:#1414149c;
+  background-color:rgba(#141414, 0.8);
   padding: 3px;
   box-sizing: border-box;
   font-size: 20px;
@@ -105,7 +105,7 @@ height: 135px;
 .main-art .ar-right .top2 dl{
   display: block;
   width: 370px;
-  background-color: #1414149c;
+  background-color: rgba(#141414, 0.8);
   color: #fff;
   padding: 3px 0px;
 }
@@ -113,7 +113,7 @@ height: 135px;
 .main-art .ar-right .top2 dd{padding-left: 10px;}
 .main-art .ar-right .bottom2{position: absolute; bottom: 0;}
 .main-art .ar-right .bottom2 dl{
-    background-color: #1414149c;
+    background-color: rgba(#141414, 0.8);
     color: #fff;
     padding: 5px 0;
     box-sizing: border-box;
@@ -370,7 +370,7 @@ small{color: #fff; padding-left: 15px;}
   .main-art .ar-left dl dt{margin-left: 17px;}
   .main-art .ar-left dl dd{text-align: left; padding-left: 17px;}
 
-  .main-art .ar-right{float: none; width: inherit; height: 117px; vertical-align:none;}
+  .main-art .ar-right{float: none; width: inherit; height: 117px; vertical-align: inherit;}
   .main-art .ar-right .top{float: left; width: 50%; position: relative;}
   .main-art .ar-right .top2{position: inherit; top: inherit;}
   .main-art .ar-right .top2 dl{
